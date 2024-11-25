@@ -1,6 +1,6 @@
 <?php
 function setEnvironnement(){
-    $filename = ".env.local";
+    $filename = $_SERVER['DOCUMENT_ROOT']."/.env.local";
     if(!file_exists($filename)){
         throw new Exception("$filename doesn't exist");
     }
