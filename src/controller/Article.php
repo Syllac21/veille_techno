@@ -30,7 +30,7 @@ Class Article
 
     /**
      * Récupère l'article correspondant à l'id.
-     * Reçoit une variable int.
+     * Reçoit l'id sous la forme d'une variable int.
      */
     public function getArticle($id) : array
     {
@@ -52,6 +52,10 @@ Class Article
 
     }
 
+    /**
+     * Modifie l'article correpondant à l'id
+     * Reçoit l'id sous la forme d'une variable int.
+     */
     public function modArticle(array $postData):bool
     {
         $id = $postData['id'];
@@ -70,6 +74,10 @@ Class Article
         ]);
     }
 
+    /**
+     * supprime l'article correspondant à l'id
+     * Reçoit l'id sous la forme d'une variable int.
+     */
     public function delArticle($id):bool
     {
         $dbc = new Model;

@@ -1,8 +1,4 @@
 <?php
-// test .env
-require_once(__DIR__.'./src/model/core.php');
-setEnvironnement();
-var_dump($_ENV);
 
 if(isset($_GET['action'])){
     if($_GET['action'] == 'add'){
